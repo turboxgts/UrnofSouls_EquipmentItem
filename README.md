@@ -1,0 +1,2 @@
+# UrnofSouls_EquipmentItem
+--over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over --yeah ok this is my first item mod, I've suffered on basic problems for 5 hours each and I just want this done :( --contact me on the official ror2 modding discord @turboxgts#4543 (my nickname may or may not still be Grandparent Slayer (don't ask) when you see this)
