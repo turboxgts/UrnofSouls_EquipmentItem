@@ -32,7 +32,8 @@ namespace UrnofSouls_EquipmentItem.Equipment
 
         protected override void CreateConfig(ConfigFile config)
         {
-
+            CreateLang();
+            CreateEquipment();
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

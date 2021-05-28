@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Remove="Artifact\ExampleArtifact.cs" />
+    <Compile Remove="Equipment\ExampleEquipment.cs" />
     <Compile Remove="Items\ExampleItem.cs" />
   </ItemGroup>
 
