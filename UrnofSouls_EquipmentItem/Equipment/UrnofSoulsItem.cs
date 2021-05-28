@@ -29,7 +29,8 @@ namespace UrnofSouls_EquipmentItem.Equipment
 
         public override void Init(ConfigFile config)
         {
-
+            CreateLang();
+            CreateEquipment();
         }
 
         protected override bool ActivateEquipment(EquipmentSlot slot)
