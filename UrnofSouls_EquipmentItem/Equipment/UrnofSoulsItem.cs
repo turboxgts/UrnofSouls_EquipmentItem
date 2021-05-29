@@ -20,7 +20,7 @@ namespace UrnofSouls_EquipmentItem.Equipment
 
         public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("UrnofSouls.prefab");
 
-        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("UrnofSoulsIcon.jpeg");
+        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("UrnofSouls_Icon");
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
