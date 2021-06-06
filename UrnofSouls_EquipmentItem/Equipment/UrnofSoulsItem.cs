@@ -66,7 +66,7 @@ namespace UrnofSouls_EquipmentItem.Equipment
         }
         private void GlobalEventManager_OnCharacterDeath(On.RoR2.GlobalEventManager.orig_OnCharacterDeath orig, GlobalEventManager self, DamageReport damageReport)
         {
-            if (equipmentDef == EquipmentDef)
+            if (damageReport.victimBody.equipmentSlot.equipmentIndex == EquipmentDef.equipmentIndex)
             {
                 throw new NotImplementedException();
             }
