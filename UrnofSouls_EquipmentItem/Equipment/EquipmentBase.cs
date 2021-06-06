@@ -31,7 +31,6 @@ namespace UrnofSouls_EquipmentItem.Equipment
         public virtual bool IsLunar { get; } = false;
 
         public EquipmentDef EquipmentDef;
-
         public abstract ItemDisplayRuleDict CreateItemDisplayRules();
 
         /// <summary>
