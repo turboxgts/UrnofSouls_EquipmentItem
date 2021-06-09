@@ -29,6 +29,7 @@ namespace UrnofSouls_EquipmentItem.Equipment
         public virtual bool IsBoss { get; } = false;
 
         public virtual bool IsLunar { get; } = false;
+        public float duration { get; internal set; }
 
         public EquipmentDef EquipmentDef;
         public abstract ItemDisplayRuleDict CreateItemDisplayRules();

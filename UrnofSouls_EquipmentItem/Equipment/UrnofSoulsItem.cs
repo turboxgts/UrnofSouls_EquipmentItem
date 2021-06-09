@@ -20,7 +20,9 @@ namespace UrnofSouls_EquipmentItem.Equipment
 
         public static BuffDef SoulChargeBuff;
 
+        public Vector3 origin;
 
+        public HurtBox target;
         private void CreateBuff()
         {
             UrnofSoulsItem.SoulChargeBuff = ScriptableObject.CreateInstance<BuffDef>();
@@ -48,6 +50,7 @@ namespace UrnofSouls_EquipmentItem.Equipment
         public void Awake()
         {
             On.RoR2.GlobalEventManager.OnCharacterDeath += GlobalEventManager_OnCharacterDeath;
+            Chat.AddMessage("hhhhh");
         }
 
         public override void Init(ConfigFile config)
@@ -57,18 +60,31 @@ namespace UrnofSouls_EquipmentItem.Equipment
         }
         protected override bool ActivateEquipment(EquipmentSlot slot)
         {
+            Chat.AddMessage("yep!");
             return false;
         }
 
         public override void Hooks()
         {
             base.Hooks();
+
         }
         private void GlobalEventManager_OnCharacterDeath(On.RoR2.GlobalEventManager.orig_OnCharacterDeath orig, GlobalEventManager self, DamageReport damageReport)
-        {
+        {            
             if (damageReport.victimBody.equipmentSlot.equipmentIndex == EquipmentDef.equipmentIndex)
             {
-                throw new NotImplementedException();
+                EffectData effectData = new EffectData
+                {
+                    origin = this.origin,
+                    genericFloat = base.duration
+                };
+                effectData.SetHurtBoxReference(this.target);
+                EffectManager.SpawnEffect(Resources.Load<GameObject>("Prefabs/Effects/OrbEffects/InfusionOrbEffect"), effectData, true);
+                Chat.AddMessage("yes this code works properly");
+            }
+            else
+            {
+                Chat.AddMessage("yes this code still works properly but it doesn't think you have the right equipment");
             }
         }
     }
